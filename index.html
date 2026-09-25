@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>26 de septiembre no se olvida · Ayotzinapa 43</title>
+<meta name="description" content="Línea de tiempo conmemorativa de la desaparición forzada de los 43 estudiantes de la Escuela Normal Rural Raúl Isidro Burgos de Ayotzinapa, el 26 y 27 de septiembre de 2014 en Iguala, Guerrero.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect fill='%23120F14' width='64' height='64'/><text x='32' y='42' text-anchor='middle' font-size='22' fill='%23D4B36A' font-family='Georgia'>43</text></svg>">
+<style>
+:root{
+  --bg:#16131A; --card:#2A2420; --paper:#F3EBD8; --ink:#F3EBD8; --muted:#C4B8A4;
+  --line:rgba(243,235,216,.18); --red:#C45C4A; --gold:#D4B36A; --green:#8FAF8A; --blue:#9AA7C4;
+  --font-d:Georgia,'Times New Roman',serif; --font-b:Georgia,'Times New Roman',serif; --font-m:'Courier New',monospace;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;color:var(--ink);font-family:var(--font-b);line-height:1.65;min-height:100vh;
+  background-color:#120F14;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(196,92,74,.16), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 110%, rgba(20,16,28,.88), transparent 60%),
+    repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(243,235,216,.025) 28px);
+  background-attachment:scroll;
+}
+body::before{
+  content:"43";position:fixed;inset:auto 0 6vh 0;text-align:center;
+  font-family:var(--font-d);font-size:28vw;font-weight:800;line-height:1;
+  color:rgba(243,235,216,.035);letter-spacing:-.06em;pointer-events:none;z-index:0;
+}
+.wrap{max-width:980px;margin:0 auto;padding:2.4rem 1.3rem 3rem;position:relative;z-index:1}
+button{font-family:inherit;cursor:pointer}
+.banner{text-align:center;margin-bottom:1.6rem}
+.banner .date{font-family:var(--font-m);letter-spacing:.18em;font-size:12px;color:var(--gold);text-transform:uppercase}
+h1{font-family:var(--font-d);font-size:2.4rem;line-height:1.08;margin:.4rem 0 .5rem;font-weight:800}
+h1 em{display:block;font-family:var(--font-b);font-style:italic;font-weight:400;font-size:.38em;color:var(--red);margin-top:.35em}
+.dek{color:var(--muted);max-width:64ch;margin:0 auto}
+.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:1.4rem 0 0}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:6px 12px;font-family:var(--font-m);font-size:11px}
+.chip.active{color:var(--paper);border-color:var(--gold)}
+.track-wrap{overflow-x:auto;margin:1.6rem -1.3rem;padding:8px 1.3rem 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(10,8,12,.55);-webkit-overflow-scrolling:touch}
+.track{display:flex;gap:18px;min-width:max-content;position:relative;padding:28px 20px 10px}
+.track::before{content:'';position:absolute;left:0;right:0;top:52px;height:1px;background:var(--gold);opacity:.45}
+.mark{flex:0 0 auto;width:92px;background:none;border:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;z-index:1;padding:0}
+.mark .t{font-family:var(--font-m);font-size:10px;margin-bottom:8px;white-space:nowrap}
+.dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--gold);background:#110E0C}
+.mark.active .dot{background:var(--gold)}
+.mark.active .t{color:var(--paper);font-weight:700}
+.mark.dim{opacity:.28}
+.mark.c-escuela .dot{border-color:var(--green)}
+.mark.c-noche .dot{border-color:var(--red)}
+.mark.c-busqueda .dot{border-color:#C48A4A}
+.mark.c-verdad .dot{border-color:var(--gold)}
+.mark.c-memoria .dot{border-color:var(--blue)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.4rem 1.4rem 1.2rem;position:relative}
+.tab{position:absolute;top:-11px;right:16px;background:var(--red);color:#fff;font-family:var(--font-m);font-size:10px;letter-spacing:.08em;padding:4px 9px;border-radius:2px}
+.kicker{font-family:var(--font-m);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 .35rem}
+h2{font-family:var(--font-d);font-size:1.45rem;margin:0 0 .8rem;line-height:1.2}
+.body p{margin:0 0 .75rem;color:#E8DFCC}
+.body ul{margin:.2rem 0 1rem;padding-left:1.15rem;color:#E8DFCC}
+.facts{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0 0 1rem}
+.facts li{font-family:var(--font-m);font-size:11px;border:1px solid var(--line);padding:4px 9px;border-radius:3px;color:var(--muted)}
+.imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+figure{margin:0;background:#110E0C;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+figure img{width:100%;height:180px;object-fit:cover;display:block;background:#241E1A}
+figure figcaption{font-family:var(--font-m);font-size:10.5px;padding:7px 8px;color:var(--muted)}
+.note{margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem;font-style:italic}
+.petition{background:rgba(10,8,12,.55);border-left:3px solid var(--gold);padding:.8rem 1rem;margin:0 0 1rem;color:#E8DFCC;font-size:.95rem}
+.fichas-wrap,.refs{margin-top:2.2rem}
+.fichas-lead,.refs p{color:var(--muted);margin:0 0 1rem;max-width:70ch}
+.fichas{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.ficha{background:var(--card);border:1px solid var(--line);border-radius:5px;overflow:hidden;padding:0 0 10px}
+.ficha .pic{height:190px;background:#1a1714;display:block;width:100%;object-fit:cover;object-position:center top}
+.ficha .pad{padding:10px 12px 0}
+.ficha .n{font-family:var(--font-m);font-size:10px;color:var(--gold);letter-spacing:.08em}
+.ficha h3{font-family:var(--font-d);font-size:.98rem;margin:.2rem 0 .35rem;line-height:1.25}
+.ficha p{margin:0;font-size:.82rem;color:var(--muted)}
+.ficha .tag{display:inline-block;margin-top:8px;font-family:var(--font-m);font-size:10px;border:1px solid var(--line);padding:2px 7px;border-radius:3px;color:var(--gold)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:1.35rem 0 0}
+.gallery img{height:140px}
+.refs ol{color:#E8DFCC;padding-left:1.3rem;max-width:72ch}
+.refs li{margin:0 0 .55rem}
+.refs a{overflow-wrap:anywhere}
+footer{text-align:center;margin-top:1.8rem;font-family:var(--font-m);font-size:11px;color:var(--muted)}
+a{color:var(--gold)}
+@media(max-width:640px){
+  h1{font-size:1.85rem}
+  .wrap{padding:1.3rem .9rem 2.2rem}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img,.ficha .pic{height:150px}
+  figure img{height:150px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="banner">
+    <p class="date">26 de septiembre · vivos se los llevaron</p>
+    <h1>Ayotzinapa 43<em>de la Normal a Iguala · hora por hora · año por año</em></h1>
+    <p class="dek">Línea conmemorativa de la desaparición forzada de 43 estudiantes de la Escuela Normal Rural Raúl Isidro Burgos, en Iguala, Guerrero, la noche del 26 al 27 de septiembre de 2014. Toca cada fecha. Abajo están las 43 fichas.</p>
+    <div class="legend">
+      <button class="chip active" data-f="all">Todo</button>
+      <button class="chip" data-f="escuela">La Normal</button>
+      <button class="chip" data-f="noche">26–27 sep</button>
+      <button class="chip" data-f="busqueda">Búsqueda</button>
+      <button class="chip" data-f="verdad">La verdad</button>
+      <button class="chip" data-f="memoria">Memoria</button>
+    </div>
+    <div class="gallery" id="hero-gallery"></div>
+  </header>
+
+  <div class="track-wrap">
+    <div class="track" id="track"></div>
+  </div>
+
+  <article class="card" id="card">
+    <span class="tab" id="tab"></span>
+    <p class="kicker" id="kicker"></p>
+    <h2 id="title"></h2>
+    <div class="body" id="body"></div>
+    <ul class="facts" id="facts"></ul>
+    <div class="imgs" id="imgs"></div>
+    <p class="note" id="note"></p>
+  </article>
+
+  <section class="fichas-wrap" id="fichas">
+    <h2>Las 43 fichas</h2>
+    <p class="fichas-lead">Estudiantes de la Normal Rural de Ayotzinapa, casi todos de primer año. Querían ser maestros en comunidades rurales e indígenas de Guerrero. Tres han sido identificados por restos; los demás siguen desaparecidos. Las familias piden presentación con vida y verdad completa. Los retratos son los carteles públicos de búsqueda.</p>
+    <div class="fichas" id="fichas-grid"></div>
+  </section>
+
+  <section class="refs" id="referencias">
+    <h2>Referencias bibliográficas y fuentes</h2>
+    <p>Sitio escolar de memoria. No sustituye a los informes forenses ni a la investigación judicial. Las horas de la noche del 26 de septiembre varían según testigos; se sigue la reconstrucción más citada por el GIEI y cronologías periodísticas.</p>
+    <ol>
+      <li>Grupo Interdisciplinario de Expertos Independientes (GIEI). <em>Informe Ayotzinapa I</em> (2015), <em>II</em> (2016) y informes posteriores (2022–2023). Comisión Interamericana de Derechos Humanos.</li>
+      <li>Comisión Interamericana de Derechos Humanos. Medidas cautelares y seguimiento del caso de los estudiantes de Ayotzinapa.</li>
+      <li>Amnistía Internacional. “Mexico: Ayotzinapa student’s enforced disappearance – Timeline” (2015) y actualizaciones sobre impunidad y acceso a archivos.</li>
+      <li>Comisión para la Verdad y Acceso a la Justicia del caso Ayotzinapa (COVAJ). Informe de 2022 que califica los hechos como crimen de Estado.</li>
+      <li>Equipo Argentino de Antropología Forense (EAAF). Peritajes independientes solicitados por las familias sobre restos e incineración en Cocula.</li>
+      <li>Associated Press. “The night when 43 students disappeared in Mexico: A timeline of key events” (2024).</li>
+      <li>The New York Times. Reportajes de seguimiento del caso Iguala-Ayotzinapa (2014–2023), incluida evidencia de comunicaciones.</li>
+      <li>Centro de Medios Libres. “Retratos y lista de 43 estudiantes de Ayotzinapa detenidos-desaparecidos” (13 oct 2014). Carteles de búsqueda usados en las fichas.</li>
+      <li>Escuela Normal Rural Raúl Isidro Burgos / FECSM. Contexto de las normales rurales y la marcha conmemorativa del 2 de octubre.</li>
+      <li>Wikimedia Commons. Fotografías de marchas y memoriales (licencias libres): Luis Alvaz, Semoan80 y registros de movilizaciones 2014–2024.</li>
+      <li>NACLA. “Ayotzinapa Timeline” (cronología de hechos posteriores a septiembre de 2014).</li>
+      <li>WOLA. “Ayotzinapa Case: Key Points to Understand the Mexican Government's New Actions” (2022).</li>
+    </ol>
+  </section>
+
+  <footer>
+    Retratos: carteles de búsqueda difundidos por las familias y el Centro de Medios Libres (2014). Marchas: Wikimedia Commons. Esta página no muestra escenas de violencia. · Porque vivos se los llevaron, vivos los queremos.
+  </footer>
+</div>
+<script>
+const M = "imgs/marchas/";
+const F = "imgs/fichas/";
+
+const EVENTS = [
+{id:"e01",cat:"escuela",when:"1926–2014",title:"Una Normal para el campo",kicker:"Antes · la escuela",
+body:"<p>La Escuela Normal Rural <strong>Raúl Isidro Burgos</strong>, en Ayotzinapa, municipio de Tixtla, Guerrero, forma maestros para comunidades campesinas e indígenas. Fue fundada en 1926 y lleva el nombre del maestro que impulsó su edificio en la antigua hacienda.</p><p>Los normalistas salen de pueblos de La Montaña, la Costa Chica y el centro de Guerrero. En septiembre se preparan para la conmemoración del 2 de octubre en la Ciudad de México.</p>",
+facts:["Tixtla, Guerrero","Maestros rurales","Marcha del 2 de octubre"],
+imgs:[{src:M+"04.jpg",cap:"Protesta universitaria por los 43. Luis Alvaz / Wikimedia"},{src:M+"03.jpg",cap:"Memoria de los 43. Semoan80 / Wikimedia"}],
+note:"Ayotzinapa no empieza el 26 de septiembre. Empieza en un internado de maestros pobres."},
+
+{id:"e02",cat:"escuela",when:"26 sep · tarde",title:"Salen hacia Iguala",kicker:"26 de septiembre de 2014 · tarde",
+body:"<p>Por la tarde, decenas de estudiantes —en su mayoría de nuevo ingreso— salen de la Normal rumbo a Iguala, a unos 120 kilómetros. Van a conseguir más autobuses y recursos para viajar a la marcha del 2 de octubre, que recuerda Tlatelolco 1968.</p><p>Tomar un camión de pasajeros para una movilización era una práctica conocida. Esa noche el trayecto no termina en la Ciudad de México.</p>",
+facts:["~100 estudiantes en movimiento","Destino: marcha del 2 de octubre","Iguala, Guerrero"],
+imgs:[{src:M+"01.jpg",cap:"Solidaridad internacional, Buenos Aires 2014"},{src:M+"05.jpg",cap:"Marcha 2022: presentación con vida"}],
+note:"Iban a una conmemoración. No iban a un combate."},
+
+{id:"e03",cat:"noche",when:"21:00–21:30",title:"Primeros choques en Iguala",kicker:"26 de septiembre · 21:00 a 21:30",
+body:"<p>En Iguala los estudiantes logran varios autobuses. Hacia las 21:30, en la zona de la calle Juan N. Álvarez, patrullas municipales interceptan los camiones. Hay disparos. Quedan heridos. Uno de ellos, Aldo Gutiérrez Solano, recibe un impacto grave y permanece años sin recuperar la conciencia; fallece en 2024.</p><p>Los estudiantes avisan a la Normal. Salen compañeros a buscarlos.</p>",
+facts:["Policía municipal de Iguala","Calle Juan N. Álvarez","Heridos y cerco"],
+imgs:[{src:M+"02.jpg",cap:"Concentración por Iguala, 2014"},{src:M+"06.jpg",cap:"Marcha por la presentación con vida, 2022"}],
+note:"No se describen heridas. Un grupo de estudiantes desarmados fue atacado en la calle."},
+
+{id:"e04",cat:"noche",when:"22:00–00:00",title:"Varios ataques, una misma noche",kicker:"26 de septiembre · noche",
+body:"<p>Los disparos no ocurren en un solo sitio. Hay ataques en distintos puntos de Iguala y en la carretera. Un autobús del equipo de futbol Avispones de Chilpancingo, que no llevaba normalistas, también es agredido.</p><p>Esa noche mueren seis personas, entre estudiantes y civiles. De los autobuses, 43 normalistas son detenidos por policías y no vuelven a aparecer.</p>",
+facts:["Varios puntos de Iguala","6 personas asesinadas esa noche","43 estudiantes desaparecidos"],
+imgs:[{src:M+"07.jpg",cap:"Marcha Ayotzinapa, Ciudad de México 2019"},{src:M+"08.jpg",cap:"Familias y estudiantes, 2022"}],
+note:"La desaparición forzada empieza cuando la autoridad detiene y no rinde cuentas de las personas."},
+
+{id:"e05",cat:"noche",when:"27 sep · madrugada",title:"La ciudad amanece y faltan 43",kicker:"27 de septiembre de 2014",
+body:"<p>Al amanecer, compañeros, periodistas y vecinos recorren las calles. Hay autobuses dañados. Faltan estudiantes.</p><p>Las familias viajan a Iguala y a Chilpancingo. Empieza la búsqueda que no se ha detenido. La pregunta es la misma: <em>¿dónde están?</em></p>",
+facts:["Búsqueda inmediata","Familias en Guerrero","Sin lista oficial completa esa mañana"],
+imgs:[{src:M+"09.jpg",cap:"Carteles y memoria en marcha"},{src:M+"03.jpg",cap:"Gente unida por los 43"}],
+note:"El 27 de septiembre no cierra el caso. Lo abre."},
+
+{id:"e06",cat:"busqueda",when:"oct 2014",title:"México sale a la calle",kicker:"Después · octubre de 2014",
+body:"<p>En octubre las marchas recorren el país y otras ciudades del mundo. La consigna se vuelve una sola frase: <strong>vivos se los llevaron, vivos los queremos</strong>.</p><p>Se detiene a policías municipales. Huyen el alcalde de Iguala, José Luis Abarca, y su esposa. Las madres y los padres no sueltan las fotos de sus hijos.</p>",
+facts:["Marchas nacionales","Policías de Iguala detenidos","Fotos en las avenidas"],
+imgs:[{src:M+"01.jpg",cap:"Protesta por los 43, 2014"},{src:M+"04.jpg",cap:"Universidad Autónoma de Aguascalientes, nov 2014"}],
+note:"La memoria pública nació en las calles, no en el boletín oficial."},
+
+{id:"e07",cat:"verdad",when:"ene 2015",title:"La «verdad histórica»",kicker:"Investigación oficial · 27 de enero de 2015",
+body:"<p>El procurador Jesús Murillo Karam presenta la versión llamada «verdad histórica»: según el Estado, policías entregaron a los estudiantes al grupo criminal Guerreros Unidos y los restos habrían sido calcinados en el basurero de Cocula.</p><p>Las familias y peritos independientes no aceptan esa historia como cierre.</p>",
+facts:["PGR","Basurero de Cocula","Versión impugnada"],
+imgs:[{src:M+"02.jpg",cap:"Exigencia de verdad, 2014"},{src:M+"05.jpg",cap:"Años después, la demanda es la misma"}],
+note:"Una investigación no termina cuando el gobierno da una rueda de prensa."},
+
+{id:"e08",cat:"verdad",when:"2015–2016",title:"El GIEI desmonta el relato",kicker:"Expertos independientes · GIEI",
+body:"<p>La CIDH impulsa el <strong>Grupo Interdisciplinario de Expertos Independientes</strong> (GIEI). Sus informes señalan contradicciones graves: la incineración masiva en Cocula no se sostiene con la evidencia; hubo tortura en detenciones; autoridades de varios niveles sabían que los estudiantes se movían esa noche.</p><p>El Equipo Argentino de Antropología Forense trabaja con las familias.</p>",
+facts:["GIEI","CIDH","EAAF"],
+imgs:[{src:M+"06.jpg",cap:"Marcha 2022"},{src:M+"07.jpg",cap:"CDMX, 2019"}],
+note:"Verdad, en este caso, quiere decir archivos, peritajes y nombres de responsables."},
+
+{id:"e09",cat:"verdad",when:"2014–2020",title:"Tres identificaciones, 40 ausencias",kicker:"Restos identificados",
+body:"<p>Con el paso de los años se identifican restos de tres estudiantes:</p><ul><li><strong>Alexander Mora Venancio</strong>, 2014.</li><li><strong>Jhosivani Guerrero de la Cruz</strong>, 2019.</li><li><strong>Christian Alfonso Rodríguez Telumbre</strong>, 2020.</li></ul><p>Identificar no es lo mismo que explicar. No hay todavía una cuenta pública, completa y creíble de qué ocurrió con cada uno de los 43.</p>",
+facts:["3 identificados","40 aún sin hallar","Sin expediente cerrado"],
+imgs:[{src:M+"08.jpg",cap:"Presentación con vida"},{src:M+"09.jpg",cap:"Las fotos siguen en las marchas"}],
+note:"Cada nombre identificado obliga a seguir buscando a los demás."},
+
+{id:"e10",cat:"verdad",when:"2022–2023",title:"Crimen de Estado y archivos cerrados",kicker:"Comisión de la Verdad y retiro del GIEI",
+body:"<p>En 2022, la Comisión para la Verdad y Acceso a la Justicia del caso Ayotzinapa califica los hechos como <strong>crimen de Estado</strong>.</p><p>Se detiene a Murillo Karam. El GIEI se retira en 2023 denunciando que el Ejército no entrega toda la información. Las familias siguen exigiendo los expedientes militares de aquella noche.</p>",
+facts:["Crimen de Estado","Folios militares","GIEI se retira en 2023"],
+imgs:[{src:M+"05.jpg",cap:"La demanda no cambió"},{src:M+"01.jpg",cap:"Solidaridad desde 2014"}],
+note:"Sin archivos no hay verdad. Sin verdad no hay justicia."},
+
+{id:"e11",cat:"memoria",when:"cada 26",title:"La marcha que no se apaga",kicker:"Memoria · cada 26 de septiembre",
+body:"<p>Cada año, el 26 de septiembre, hay marcha en la Ciudad de México, en Chilpancingo, en Tixtla y en decenas de plazas. Los padres y las madres cargan las mismas fotografías.</p><div class=\"petition\">Porque vivos se los llevaron, vivos los queremos.<br>26 de septiembre no se olvida.</div><p>Esta línea no cierra el expediente. Solo ayuda a no perder el hilo.</p>",
+facts:["Marcha anual","Familias","Normales rurales"],
+imgs:[{src:M+"06.jpg",cap:"Marcha 2022"},{src:M+"02.jpg",cap:"2014, el primer mes"}],
+note:"La conmemoración no pide espectáculo. Pide nombres, archivos y regreso."}
+];
+
+const ESTUDIANTES = [
+{n:1,nombre:"Abel García Hernández",foto:"abel-garcia-hernandez.jpg",edad:"20 años",dato:"Tecoanapa, Guerrero. Ayudaba en la milpa familiar."},
+{n:2,nombre:"Abelardo Vázquez Penitén",foto:"abelardo-vazquez-peniten.jpg",edad:"19 años",dato:"Le decían El Abe. Leía y jugaba futbol."},
+{n:3,nombre:"Adán Abraján de la Cruz",foto:"adan-abrajan-de-la-cruz.jpg",edad:"24 años",dato:"Barrio de El Fortín, Tixtla. Aficionado al futbol."},
+{n:4,nombre:"Alexander Mora Venancio",foto:"alexander-mora-venancio.jpg",edad:"21 años",dato:"Restos identificados en 2014.",tag:"Identificado"},
+{n:5,nombre:"Antonio Santana Maestro",foto:"antonio-santana-maestro.jpg",edad:"20 años",dato:"Normalista de primer ingreso."},
+{n:6,nombre:"Benjamín Ascencio Bautista",foto:"benjamin-ascencio-bautista.jpg",edad:"19 años",dato:"De Chilapa. Había sido educador comunitario del CONAFE."},
+{n:7,nombre:"Bernardo Flores Alcaraz",foto:"bernardo-flores-alcaraz.jpg",edad:"21 años",dato:"Coordinaba al grupo que buscaba autobuses."},
+{n:8,nombre:"Carlos Iván Ramírez Villarreal",foto:"carlos-ivan-ramirez-villarreal.jpg",edad:"20 años",dato:"Estudiante de la Normal Rural."},
+{n:9,nombre:"Carlos Lorenzo Hernández Muñoz",foto:"carlos-lorenzo-hernandez-munoz.jpg",edad:"19 años",dato:"Normalista de nuevo ingreso."},
+{n:10,nombre:"César Manuel González Hernández",foto:"cesar-manuel-gonzalez-hernandez.jpg",edad:"21 años",dato:"Originario de Huamantla, Tlaxcala."},
+{n:11,nombre:"Christian Alfonso Rodríguez Telumbre",foto:"christian-alfonso-rodriguez-telumbre.jpg",edad:"21 años",dato:"Restos identificados en 2020.",tag:"Identificado"},
+{n:12,nombre:"Christian Tomás Colón Garnica",foto:"christian-tomas-colon-garnica.jpg",edad:"18 años",dato:"Uno de los más jóvenes del grupo."},
+{n:13,nombre:"Cutberto Ortiz Ramos",foto:"cutberto-ortiz-ramos.jpg",edad:"22 años",dato:"Estudiante de la Normal Rural."},
+{n:14,nombre:"Dorian González Parral",foto:"dorian-gonzalez-parral.jpg",edad:"19 años",dato:"Normalista de primer año."},
+{n:15,nombre:"Emiliano Alen Gaspar de la Cruz",foto:"emiliano-alen-gaspar-de-la-cruz.jpg",edad:"23 años",dato:"Compañero de generación de 2014."},
+{n:16,nombre:"Everardo Rodríguez Bello",foto:"everardo-rodriguez-bello.jpg",edad:"21 años",dato:"Le preocupaba la desigualdad. Apodado Shaggy."},
+{n:17,nombre:"Felipe Arnulfo Rosa",foto:"felipe-arnulfo-rosa.jpg",edad:"20 años",dato:"Familia campesina de Ayutla, Guerrero."},
+{n:18,nombre:"Giovanni Galindes Guerrero",foto:"giovanni-galindes-guerrero.jpg",edad:"20 años",dato:"Por su agilidad le decían Spider."},
+{n:19,nombre:"Israel Caballero Sánchez",foto:"israel-caballero-sanchez.jpg",edad:"21 años",dato:"De Atliaca, Tixtla. Quería ser maestro bilingüe."},
+{n:20,nombre:"Israel Jacinto Lugardo",foto:"israel-jacinto-lugardo.jpg",edad:"19 años",dato:"Originario de Atoyac. Le decían Chulyto."},
+{n:21,nombre:"Jesús Jovany Rodríguez Tlatempa",foto:"jesus-jovany-rodriguez-tlatempa.jpg",edad:"21 años",dato:"Apoyaba a su mamá. Le decían Churro."},
+{n:22,nombre:"Jhosivani Guerrero de la Cruz",foto:"jhosivani-guerrero-de-la-cruz.jpg",edad:"20 años",dato:"De Omeapa. Restos identificados en 2019.",tag:"Identificado"},
+{n:23,nombre:"Jonás Trujillo González",foto:"jonas-trujillo-gonzalez.jpg",edad:"20 años",dato:"Estudiante de la Normal Rural."},
+{n:24,nombre:"Jorge Álvarez Nava",foto:"jorge-alvarez-nava.jpg",edad:"19 años",dato:"Normalista de nuevo ingreso."},
+{n:25,nombre:"Jorge Aníbal Cruz Mendoza",foto:"jorge-anibal-cruz-mendoza.jpg",edad:"19 años",dato:"Compañero de la generación 2014."},
+{n:26,nombre:"Jorge Antonio Tizapa Legideño",foto:"jorge-antonio-tizapa-legideno.jpg",edad:"20 años",dato:"Estudiante de Ayotzinapa."},
+{n:27,nombre:"Jorge Luis González Parral",foto:"jorge-luis-gonzalez-parral.jpg",edad:"21 años",dato:"Normalista de la Raúl Isidro Burgos."},
+{n:28,nombre:"José Ángel Campos Cantor",foto:"jose-angel-campos-cantor.jpg",edad:"Normalista",dato:"Su familia exige presentación con vida."},
+{n:29,nombre:"José Ángel Navarrete González",foto:"jose-angel-navarrete-gonzalez.jpg",edad:"Normalista",dato:"Desaparecido la noche de Iguala."},
+{n:30,nombre:"José Eduardo Bartolo Tlatempa",foto:"jose-eduardo-bartolo-tlatempa.jpg",edad:"Normalista",dato:"Estudiante de la Normal Rural."},
+{n:31,nombre:"José Luis Luna Torres",foto:"jose-luis-luna-torres.jpg",edad:"Normalista",dato:"Compañero de los 43."},
+{n:32,nombre:"Julio César López Patolzin",foto:"julio-cesar-lopez-patolzin.jpg",edad:"Normalista",dato:"Desaparecido el 26–27 de septiembre de 2014."},
+{n:33,nombre:"Leonel Castro Abarca",foto:"leonel-castro-abarca.jpg",edad:"19 años",dato:"De El Magueyito, Tecuanapa."},
+{n:34,nombre:"Luis Ángel Abarca Carrillo",foto:"luis-angel-abarca-carrillo.jpg",edad:"21 años",dato:"Costa Chica, Cuautepec. Le decían Amiltzingo."},
+{n:35,nombre:"Luis Ángel Francisco Arzola",foto:"luis-angel-francisco-arzola.jpg",edad:"Normalista",dato:"Estudiante de la Normal de Ayotzinapa."},
+{n:36,nombre:"Magdaleno Rubén Lauro Villegas",foto:"magdaleno-ruben-lauro-villegas.jpg",edad:"Normalista",dato:"Uno de los 43 desaparecidos."},
+{n:37,nombre:"Marcial Pablo Baranda",foto:"marcial-pablo-baranda.jpg",edad:"20 años",dato:"Le decían Magallón."},
+{n:38,nombre:"Marco Antonio Gómez Molina",foto:"marco-antonio-gomez-molina.jpg",edad:"Normalista",dato:"Desaparecido en Iguala."},
+{n:39,nombre:"Martín Getsemaní Sánchez García",foto:"martin-getsemani-sanchez-garcia.jpg",edad:"Normalista",dato:"Estudiante de la Raúl Isidro Burgos."},
+{n:40,nombre:"Mauricio Ortega Valerio",foto:"mauricio-ortega-valerio.jpg",edad:"Normalista",dato:"Su familia sigue buscando."},
+{n:41,nombre:"Miguel Ángel Hernández Martínez",foto:"miguel-angel-hernandez-martinez.jpg",edad:"Normalista",dato:"Desaparecido la noche del 26 de septiembre."},
+{n:42,nombre:"Miguel Ángel Mendoza Zacarías",foto:"miguel-angel-mendoza-zacarias.jpg",edad:"Normalista",dato:"Estudiante de la Normal Rural."},
+{n:43,nombre:"Saúl Bruno García",foto:"saul-bruno-garcia.jpg",edad:"Normalista",dato:"El último nombre de la lista de los 43."}
+];
+
+const track=document.getElementById("track");
+EVENTS.forEach((e,i)=>{
+  const b=document.createElement("button");
+  b.className="mark c-"+e.cat;
+  b.dataset.cat=e.cat;
+  b.innerHTML=`<span class="t">${e.when}</span><span class="dot"></span>`;
+  b.onclick=()=>show(i);
+  track.appendChild(b);
+});
+
+function show(i){
+  const e=EVENTS[i];
+  document.getElementById("tab").textContent=e.when;
+  document.getElementById("kicker").textContent=e.kicker;
+  document.getElementById("title").textContent=e.title;
+  document.getElementById("body").innerHTML=e.body;
+  document.getElementById("note").textContent=e.note||"";
+  const ul=document.getElementById("facts"); ul.innerHTML="";
+  e.facts.forEach(f=>{const li=document.createElement("li");li.textContent=f;ul.appendChild(li);});
+  const box=document.getElementById("imgs"); box.innerHTML="";
+  (e.imgs||[]).forEach(im=>{
+    const fig=document.createElement("figure");
+    fig.innerHTML=`<img src="${im.src}" alt="${im.cap}" loading="lazy" decoding="async" onerror="this.parentElement.style.display='none'"><figcaption>${im.cap}</figcaption>`;
+    box.appendChild(fig);
+  });
+  document.querySelectorAll(".mark").forEach((m,idx)=>m.classList.toggle("active",idx===i));
+}
+
+document.querySelectorAll(".chip").forEach(ch=>ch.onclick=()=>{
+  document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));
+  ch.classList.add("active");
+  const f=ch.dataset.f;
+  document.querySelectorAll(".mark").forEach(m=>m.classList.toggle("dim",!(f==="all"||m.dataset.cat===f)));
+});
+
+[
+  [M+"01.jpg","Buenos Aires, 2014. Solidaridad con Iguala"],
+  [M+"02.jpg","Concentración por los 43, 2014"],
+  [M+"03.jpg","Memoria de los 43"],
+  [M+"04.jpg","Protesta en la UAA. Luis Alvaz"],
+  [M+"05.jpg","Marcha 2022: presentación con vida"],
+  [M+"06.jpg","Familias y estudiantes, 2022"]
+].forEach(([src,cap],i)=>{
+  const fig=document.createElement("figure");
+  fig.innerHTML=`<img src="${src}" alt="${cap}" loading="${i<2?'eager':'lazy'}" decoding="async"><figcaption>${cap}</figcaption>`;
+  document.getElementById("hero-gallery").appendChild(fig);
+});
+
+const grid=document.getElementById("fichas-grid");
+ESTUDIANTES.forEach(s=>{
+  const d=document.createElement("article");
+  d.className="ficha";
+  d.innerHTML=`<img class="pic" src="${F+s.foto}" alt="${s.nombre}" loading="lazy" decoding="async" width="280" height="315"><div class="pad"><div class="n">43 · ${String(s.n).padStart(2,"0")}</div><h3>${s.nombre}</h3><p>${s.edad}. ${s.dato}</p>${s.tag?`<span class="tag">${s.tag}</span>`:""}</div>`;
+  grid.appendChild(d);
+});
+
+show(0);
+
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("./sw.js");
+}
+</script>
+</body>
+</html>
