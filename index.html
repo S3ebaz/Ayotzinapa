@@ -4,115 +4,62 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>26 de septiembre no se olvida · Ayotzinapa 43</title>
-<meta name="description" content="Linea de tiempo conmemorativa de la desaparicion forzada de los 43 estudiantes de Ayotzinapa.">
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister()});});
+}
+</script>
 <style>
-:root{--bg:#16131A;--card:#2A2420;--paper:#F3EBD8;--ink:#F3EBD8;--muted:#C4B8A4;--line:rgba(243,235,216,.18);--red:#C45C4A;--gold:#D4B36A;--green:#8FAF8A;--blue:#9AA7C4;--font-d:Georgia,'Times New Roman',serif;--font-b:Georgia,serif;--font-m:'Courier New',monospace}
-*{box-sizing:border-box}
-body{margin:0;color:var(--ink);font-family:var(--font-b);line-height:1.65;min-height:100vh;background:#120F14;background-image:radial-gradient(ellipse 90% 55% at 50% -10%,rgba(196,92,74,.16),transparent 55%),repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(243,235,216,.025) 28px)}
-body::before{content:"43";position:fixed;inset:auto 0 6vh 0;text-align:center;font-family:var(--font-d);font-size:28vw;font-weight:800;line-height:1;color:rgba(243,235,216,.035);pointer-events:none;z-index:0}
-.wrap{max-width:980px;margin:0 auto;padding:2.4rem 1.3rem 3rem;position:relative;z-index:1}
-button{font-family:inherit;cursor:pointer}
-.banner{text-align:center;margin-bottom:1.6rem}
-.banner .date{font-family:var(--font-m);letter-spacing:.18em;font-size:12px;color:var(--gold);text-transform:uppercase}
-h1{font-family:var(--font-d);font-size:2.4rem;line-height:1.08;margin:.4rem 0 .5rem;font-weight:800}
-h1 em{display:block;font-style:italic;font-weight:400;font-size:.38em;color:var(--red);margin-top:.35em}
-.dek{color:var(--muted);max-width:64ch;margin:0 auto}
-.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:1.4rem 0 0}
-.chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:6px 12px;font-family:var(--font-m);font-size:11px}
-.chip.active{color:var(--paper);border-color:var(--gold)}
-.track-wrap{overflow-x:auto;margin:1.6rem -1.3rem;padding:8px 1.3rem 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(10,8,12,.55);-webkit-overflow-scrolling:touch}
-.track{display:flex;gap:18px;min-width:max-content;position:relative;padding:28px 20px 10px}
-.track::before{content:'';position:absolute;left:0;right:0;top:52px;height:1px;background:var(--gold);opacity:.45}
-.mark{flex:0 0 auto;width:92px;background:none;border:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;z-index:1;padding:0}
-.mark .t{font-family:var(--font-m);font-size:10px;margin-bottom:8px;white-space:nowrap}
-.dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--gold);background:#110E0C}
-.mark.active .dot{background:var(--gold)}
-.mark.active .t{color:var(--paper);font-weight:700}
-.mark.dim{opacity:.28}
-.mark.c-escuela .dot{border-color:var(--green)}
-.mark.c-noche .dot{border-color:var(--red)}
-.mark.c-busqueda .dot{border-color:#C48A4A}
-.mark.c-verdad .dot{border-color:var(--gold)}
-.mark.c-memoria .dot{border-color:var(--blue)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.4rem 1.4rem 1.2rem;position:relative}
-.tab{position:absolute;top:-11px;right:16px;background:var(--red);color:#fff;font-family:var(--font-m);font-size:10px;letter-spacing:.08em;padding:4px 9px;border-radius:2px}
+:root{--card:#2A2420;--muted:#C4B8A4;--line:rgba(243,235,216,.18);--red:#C45C4A;--gold:#D4B36A;--green:#8FAF8A;--blue:#9AA7C4;--font-d:Georgia,'Times New Roman',serif;--font-b:Georgia,serif;--font-m:'Courier New',monospace}
+*{box-sizing:border-box}body{margin:0;color:#F3EBD8;font-family:var(--font-b);line-height:1.65;min-height:100vh;background:#120F14;background-image:radial-gradient(ellipse 90% 55% at 50% -10%,rgba(196,92,74,.16),transparent 55%)}
+body::before{content:"43";position:fixed;inset:auto 0 6vh 0;text-align:center;font-family:var(--font-d);font-size:28vw;font-weight:800;color:rgba(243,235,216,.035);pointer-events:none;z-index:0}
+.wrap{max-width:980px;margin:0 auto;padding:2.4rem 1.3rem 3rem;position:relative;z-index:1}button{font-family:inherit;cursor:pointer}
+.banner{text-align:center;margin-bottom:1.6rem}.banner .date{font-family:var(--font-m);letter-spacing:.18em;font-size:12px;color:var(--gold);text-transform:uppercase}
+h1{font-family:var(--font-d);font-size:2.4rem;line-height:1.08;margin:.4rem 0 .5rem;font-weight:800}h1 em{display:block;font-style:italic;font-weight:400;font-size:.38em;color:var(--red);margin-top:.35em}
+.dek{color:var(--muted);max-width:64ch;margin:0 auto}.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:1.4rem 0 0}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:6px 12px;font-family:var(--font-m);font-size:11px}.chip.active{color:#F3EBD8;border-color:var(--gold)}
+.track-wrap{overflow-x:auto;margin:1.6rem -1.3rem;padding:8px 1.3rem 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(10,8,12,.55)}
+.track{display:flex;gap:18px;min-width:max-content;position:relative;padding:28px 20px 10px}.track::before{content:'';position:absolute;left:0;right:0;top:52px;height:1px;background:var(--gold);opacity:.45}
+.mark{flex:0 0 auto;width:92px;background:none;border:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;z-index:1;padding:0}.mark .t{font-family:var(--font-m);font-size:10px;margin-bottom:8px;white-space:nowrap}
+.dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--gold);background:#110E0C}.mark.active .dot{background:var(--gold)}.mark.active .t{color:#F3EBD8;font-weight:700}.mark.dim{opacity:.28}
+.mark.c-escuela .dot{border-color:var(--green)}.mark.c-noche .dot{border-color:var(--red)}.mark.c-busqueda .dot{border-color:#C48A4A}.mark.c-verdad .dot{border-color:var(--gold)}.mark.c-memoria .dot{border-color:var(--blue)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.4rem;position:relative}
+.tab{position:absolute;top:-11px;right:16px;background:var(--red);color:#fff;font-family:var(--font-m);font-size:10px;padding:4px 9px;border-radius:2px}
 .kicker{font-family:var(--font-m);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 .35rem}
-h2{font-family:var(--font-d);font-size:1.45rem;margin:0 0 .8rem;line-height:1.2}
-.body p{margin:0 0 .75rem;color:#E8DFCC}
-.body ul{margin:.2rem 0 1rem;padding-left:1.15rem;color:#E8DFCC}
-.facts{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0 0 1rem}
-.facts li{font-family:var(--font-m);font-size:11px;border:1px solid var(--line);padding:4px 9px;border-radius:3px;color:var(--muted)}
-.imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
-figure{margin:0;background:#110E0C;border:1px solid var(--line);border-radius:4px;overflow:hidden}
-figure img{width:100%;height:180px;object-fit:cover;display:block;background:#241E1A}
-figure figcaption{font-family:var(--font-m);font-size:10.5px;padding:7px 8px;color:var(--muted)}
+h2{font-family:var(--font-d);font-size:1.45rem;margin:0 0 .8rem}.body p{margin:0 0 .75rem;color:#E8DFCC}.facts{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0 0 1rem}.facts li{font-family:var(--font-m);font-size:11px;border:1px solid var(--line);padding:4px 9px;border-radius:3px;color:var(--muted)}
+.imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}figure{margin:0;background:#110E0C;border:1px solid var(--line);border-radius:4px;overflow:hidden}figure img{width:100%;height:180px;object-fit:cover;display:block}figure figcaption{font-family:var(--font-m);font-size:10.5px;padding:7px 8px;color:var(--muted)}
 .note{margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem;font-style:italic}
 .petition{background:rgba(10,8,12,.55);border-left:3px solid var(--gold);padding:.8rem 1rem;margin:0 0 1rem;color:#E8DFCC}
-.fichas-wrap,.refs{margin-top:2.2rem}
-.fichas-lead,.refs p{color:var(--muted);margin:0 0 1rem;max-width:70ch}
-.fichas{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
-.ficha{background:var(--card);border:1px solid var(--line);border-radius:5px;overflow:hidden;padding:0 0 10px}
-.ficha .pic{height:190px;background:#1a1714;display:block;width:100%;object-fit:cover;object-position:center top}
-.ficha .pad{padding:10px 12px 0}
-.ficha .n{font-family:var(--font-m);font-size:10px;color:var(--gold);letter-spacing:.08em}
-.ficha h3{font-family:var(--font-d);font-size:.98rem;margin:.2rem 0 .35rem;line-height:1.25}
-.ficha p{margin:0;font-size:.82rem;color:var(--muted)}
-.ficha .tag{display:inline-block;margin-top:8px;font-family:var(--font-m);font-size:10px;border:1px solid var(--line);padding:2px 7px;border-radius:3px;color:var(--gold)}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:1.35rem 0 0}
-.gallery img{height:140px}
-.refs ol{color:#E8DFCC;padding-left:1.3rem;max-width:72ch}
-.refs li{margin:0 0 .55rem}
-footer{text-align:center;margin-top:1.8rem;font-family:var(--font-m);font-size:11px;color:var(--muted)}
-a{color:var(--gold)}
-@media(max-width:640px){h1{font-size:1.85rem}.wrap{padding:1.3rem .9rem 2.2rem}.gallery{grid-template-columns:1fr 1fr}.gallery img,.ficha .pic{height:150px}}
+.fichas-wrap,.refs{margin-top:2.2rem}.fichas-lead{color:var(--muted);margin:0 0 1rem;max-width:70ch}
+.fichas{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.ficha{background:var(--card);border:1px solid var(--line);border-radius:5px;overflow:hidden;padding:0 0 10px}
+.ficha .pic{height:190px;width:100%;object-fit:cover;object-position:center top;display:block}.ficha .pad{padding:10px 12px 0}.ficha .n{font-family:var(--font-m);font-size:10px;color:var(--gold)}.ficha h3{font-family:var(--font-d);font-size:.98rem;margin:.2rem 0 .35rem}.ficha p{margin:0;font-size:.82rem;color:var(--muted)}.ficha .tag{display:inline-block;margin-top:8px;font-family:var(--font-m);font-size:10px;border:1px solid var(--line);padding:2px 7px;border-radius:3px;color:var(--gold)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:1.35rem 0 0}.gallery img{height:140px}.refs ol{color:#E8DFCC;padding-left:1.3rem}.refs li{margin:0 0 .55rem}footer{text-align:center;margin-top:1.8rem;font-family:var(--font-m);font-size:11px;color:var(--muted)}a{color:var(--gold)}
+@media(max-width:640px){h1{font-size:1.85rem}.gallery{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header class="banner">
-    <p class="date">26 de septiembre · vivos se los llevaron</p>
-    <h1>Ayotzinapa 43<em>de la Normal a Iguala · hora por hora · año por año</em></h1>
-    <p class="dek">Linea conmemorativa de la desaparicion forzada de 43 estudiantes de la Escuela Normal Rural Raul Isidro Burgos, en Iguala, Guerrero, la noche del 26 al 27 de septiembre de 2014. Toca cada fecha. Abajo estan las 43 fichas.</p>
-    <div class="legend">
-      <button class="chip active" data-f="all">Todo</button>
-      <button class="chip" data-f="escuela">La Normal</button>
-      <button class="chip" data-f="noche">26-27 sep</button>
-      <button class="chip" data-f="busqueda">Busqueda</button>
-      <button class="chip" data-f="verdad">La verdad</button>
-      <button class="chip" data-f="memoria">Memoria</button>
-    </div>
-    <div class="gallery" id="hero-gallery"></div>
-  </header>
-  <div class="track-wrap"><div class="track" id="track"></div></div>
-  <article class="card" id="card">
-    <span class="tab" id="tab"></span>
-    <p class="kicker" id="kicker"></p>
-    <h2 id="title"></h2>
-    <div class="body" id="body"></div>
-    <ul class="facts" id="facts"></ul>
-    <div class="imgs" id="imgs"></div>
-    <p class="note" id="note"></p>
-  </article>
-  <section class="fichas-wrap" id="fichas">
-    <h2>Las 43 fichas</h2>
-    <p class="fichas-lead">Estudiantes de la Normal Rural de Ayotzinapa. Tres han sido identificados por restos; los demas siguen desaparecidos. Los retratos son los carteles publicos de busqueda.</p>
-    <div class="fichas" id="fichas-grid"></div>
-  </section>
-  <section class="refs" id="referencias">
-    <h2>Referencias bibliograficas y fuentes</h2>
-    <ol>
-      <li>GIEI / CIDH. Informes Ayotzinapa (2015-2023).</li>
-      <li>COVAJ. Informe 2022: crimen de Estado.</li>
-      <li>Amnistia Internacional. Cronologia del caso Ayotzinapa (2015).</li>
-      <li>Equipo Argentino de Antropologia Forense (EAAF).</li>
-      <li>Associated Press. Timeline of key events (2024).</li>
-      <li>The New York Times. Reportajes Iguala-Ayotzinapa (2014-2023).</li>
-      <li>Centro de Medios Libres. Retratos y lista de los 43 (13 oct 2014).</li>
-      <li>Wikimedia Commons. Fotos de marchas y memoriales.</li>
-    </ol>
-  </section>
-  <footer>Porque vivos se los llevaron, vivos los queremos. · 26 de septiembre no se olvida.</footer>
+<header class="banner">
+<p class="date">26 de septiembre · vivos se los llevaron</p>
+<h1>Ayotzinapa 43<em>de la Normal a Iguala · hora por hora · año por año</em></h1>
+<p class="dek">Linea conmemorativa de la desaparicion forzada de 43 estudiantes de la Escuela Normal Rural Raul Isidro Burgos, en Iguala, Guerrero, la noche del 26 al 27 de septiembre de 2014.</p>
+<div class="legend">
+<button class="chip active" data-f="all">Todo</button>
+<button class="chip" data-f="escuela">La Normal</button>
+<button class="chip" data-f="noche">26-27 sep</button>
+<button class="chip" data-f="busqueda">Busqueda</button>
+<button class="chip" data-f="verdad">La verdad</button>
+<button class="chip" data-f="memoria">Memoria</button>
 </div>
-<script src="app.js" defer></script>
+<div class="gallery" id="hero-gallery"></div>
+</header>
+<div class="track-wrap"><div class="track" id="track"></div></div>
+<article class="card" id="card"><span class="tab" id="tab"></span><p class="kicker" id="kicker"></p><h2 id="title"></h2><div class="body" id="body"></div><ul class="facts" id="facts"></ul><div class="imgs" id="imgs"></div><p class="note" id="note"></p></article>
+<section class="fichas-wrap" id="fichas"><h2>Las 43 fichas</h2><p class="fichas-lead">Retratos de los carteles publicos de busqueda. Tres identificados por restos; los demas siguen desaparecidos.</p><div class="fichas" id="fichas-grid"></div></section>
+<section class="refs" id="referencias"><h2>Referencias</h2><ol><li>GIEI / CIDH. Informes Ayotzinapa (2015-2023).</li><li>COVAJ. Informe 2022: crimen de Estado.</li><li>Amnistia Internacional (2015).</li><li>EAAF.</li><li>Associated Press (2024).</li><li>The New York Times (2014-2023).</li><li>Centro de Medios Libres. Retratos de los 43 (2014).</li><li>Wikimedia Commons.</li></ol></section>
+<footer>Porque vivos se los llevaron, vivos los queremos.</footer>
+</div>
+<script src="./app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/S3ebaz/Ayotzinapa@main/app.js"></script>
 </body>
 </html>
