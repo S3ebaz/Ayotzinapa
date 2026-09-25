@@ -4,22 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>26 de septiembre no se olvida · Ayotzinapa 43</title>
+<meta name="referrer" content="no-referrer">
 <meta http-equiv="Cache-Control" content="no-store">
 <script>
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.getRegistrations().then(function(rs){
-    rs.forEach(function(r){ r.unregister(); });
-  });
-  if(window.caches){
-    caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); });
-  }
+  navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); });
+  if(window.caches){ caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); }); }
 }
 </script>
 <style>
 :root{--card:#2A2420;--muted:#C4B8A4;--line:rgba(243,235,216,.18);--red:#C45C4A;--gold:#D4B36A;--green:#8FAF8A;--blue:#9AA7C4}
 *{box-sizing:border-box}body{margin:0;color:#F3EBD8;font-family:Georgia,serif;line-height:1.65;min-height:100vh;background:#120F14;background-image:radial-gradient(ellipse 90% 55% at 50% -10%,rgba(196,92,74,.16),transparent 55%)}
-.wrap{max-width:980px;margin:0 auto;padding:2.2rem 1.1rem 3rem}
-button{font-family:inherit;cursor:pointer}
+.wrap{max-width:980px;margin:0 auto;padding:2.2rem 1.1rem 3rem}button{font-family:inherit;cursor:pointer}
 .banner{text-align:center}.date{font-family:'Courier New',monospace;letter-spacing:.16em;font-size:12px;color:var(--gold);text-transform:uppercase}
 h1{font-size:2.35rem;line-height:1.08;margin:.4rem 0 .5rem}h1 em{display:block;font-style:italic;font-weight:400;font-size:.38em;color:var(--red);margin-top:.3em}
 .dek{color:var(--muted);max-width:64ch;margin:0 auto}
@@ -44,8 +40,7 @@ h2{margin:0 0 .7rem;font-size:1.4rem}.body p{margin:0 0 .7rem;color:#E8DFCC}
 .facts{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0 0 1rem}
 .facts li{font-family:'Courier New',monospace;font-size:11px;border:1px solid var(--line);padding:4px 8px;border-radius:3px;color:var(--muted)}
 .note{margin-top:.8rem;padding-top:.7rem;border-top:1px solid var(--line);color:var(--muted);font-style:italic}
-.fichas-wrap,.refs{margin-top:2rem}
-.fichas{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.fichas-wrap,.refs{margin-top:2rem}.fichas{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
 .ficha{background:var(--card);border:1px solid var(--line);border-radius:5px;overflow:hidden}
 .ficha img{width:100%;height:170px;object-fit:cover;display:block;background:#1a1714}
 .ficha .pad{padding:8px 10px 10px}.ficha h3{margin:.2rem 0;font-size:.95rem}.ficha p{margin:0;font-size:.8rem;color:var(--muted)}
@@ -71,12 +66,12 @@ footer{text-align:center;margin-top:1.6rem;font-family:'Courier New',monospace;f
 <button class="chip" data-f="memoria">Memoria</button>
 </div>
 <div class="gallery">
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Manifestaci%C3%B3n_por_la_desaparici%C3%B3n_forzada_de_Iguala_%281%29%2C_AA_Buenos_Aires_2014.jpg/640px-Manifestaci%C3%B3n_por_la_desaparici%C3%B3n_forzada_de_Iguala_%281%29%2C_AA_Buenos_Aires_2014.jpg" alt="Buenos Aires 2014"><figcaption>Buenos Aires, 2014</figcaption></figure>
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Manifestaci%C3%B3n_por_la_desaparici%C3%B3n_forzada_de_Iguala_%282%29%2C_AA_Buenos_Aires_2014.jpg/640px-Manifestaci%C3%B3n_por_la_desaparici%C3%B3n_forzada_de_Iguala_%282%29%2C_AA_Buenos_Aires_2014.jpg" alt="Concentracion 2014"><figcaption>Concentracion por los 43, 2014</figcaption></figure>
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/86/43_Ayotzinapa.jpg" alt="Memoria de los 43"><figcaption>Memoria de los 43</figcaption></figure>
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Protesta_por_la_desaparici%C3%B3n_forzada_de_43_estudiantes_en_Ayotzinapa_en_la_UAA_16.jpg/640px-Protesta_por_la_desaparici%C3%B3n_forzada_de_43_estudiantes_en_Ayotzinapa_en_la_UAA_16.jpg" alt="UAA"><figcaption>Protesta en la UAA</figcaption></figure>
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Marcha_2022_por_la_presentaci%C3%B3n_con_vida_de_los_43_estudiantes_de_la_Normal_de_Ayotzinapa_1.jpg/640px-Marcha_2022_por_la_presentaci%C3%B3n_con_vida_de_los_43_estudiantes_de_la_Normal_de_Ayotzinapa_1.jpg" alt="Marcha 2022"><figcaption>Marcha 2022</figcaption></figure>
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Marcha_2022_por_la_presentaci%C3%B3n_con_vida_de_los_43_estudiantes_de_la_Normal_de_Ayotzinapa_2.jpg/640px-Marcha_2022_por_la_presentaci%C3%B3n_con_vida_de_los_43_estudiantes_de_la_Normal_de_Ayotzinapa_2.jpg" alt="Familias 2022"><figcaption>Familias y estudiantes, 2022</figcaption></figure>
+<figure><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Manifestaci%C3%B3n_por_la_desaparici%C3%B3n_forzada_de_Iguala_%281%29%2C_AA_Buenos_Aires_2014.jpg" alt="Buenos Aires 2014"><figcaption>Buenos Aires, 2014</figcaption></figure>
+<figure><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Manifestaci%C3%B3n_por_la_desaparici%C3%B3n_forzada_de_Iguala_%282%29%2C_AA_Buenos_Aires_2014.jpg" alt="Concentracion 2014"><figcaption>Concentracion por los 43, 2014</figcaption></figure>
+<figure><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/86/43_Ayotzinapa.jpg" alt="Memoria de los 43"><figcaption>Memoria de los 43</figcaption></figure>
+<figure><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Protesta_por_la_desaparici%C3%B3n_forzada_de_43_estudiantes_en_Ayotzinapa_en_la_UAA_16.jpg" alt="UAA"><figcaption>Protesta en la UAA</figcaption></figure>
+<figure><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Marcha_2022_por_la_presentaci%C3%B3n_con_vida_de_los_43_estudiantes_de_la_Normal_de_Ayotzinapa_1.jpg" alt="Marcha 2022"><figcaption>Marcha 2022</figcaption></figure>
+<figure><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Marcha_2022_por_la_presentaci%C3%B3n_con_vida_de_los_43_estudiantes_de_la_Normal_de_Ayotzinapa_2.jpg" alt="Familias 2022"><figcaption>Familias y estudiantes, 2022</figcaption></figure>
 </div>
 </header>
 <div class="track-wrap"><div class="track" id="track"></div></div>
@@ -85,7 +80,7 @@ footer{text-align:center;margin-top:1.6rem;font-family:'Courier New',monospace;f
 <section class="refs"><h2>Referencias</h2><ol><li>GIEI / CIDH. Informes Ayotzinapa (2015-2023).</li><li>COVAJ. Informe 2022: crimen de Estado.</li><li>Amnistia Internacional (2015).</li><li>EAAF.</li><li>Associated Press (2024).</li><li>The New York Times (2014-2023).</li><li>Centro de Medios Libres. Retratos de los 43 (2014).</li><li>Wikimedia Commons.</li></ol></section>
 <footer>Porque vivos se los llevaron, vivos los queremos.</footer>
 </div>
-<script src="app.js?v=7"></script>
+<script src="app.js?v=8"></script>
 <script>
 const EVENTS=[
 {cat:'escuela',when:'1926-2014',title:'Una Normal para el campo',kicker:'Antes · la escuela',body:'<p>La Escuela Normal Rural <strong>Raul Isidro Burgos</strong>, en Ayotzinapa, forma maestros para comunidades campesinas e indigenas.</p>',facts:['Tixtla, Guerrero','Maestros rurales'],note:'Ayotzinapa no empieza el 26 de septiembre.'},
