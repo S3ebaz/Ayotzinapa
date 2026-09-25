@@ -1,6 +1,6 @@
-const CACHE='ayo-movil-v2';
+const CACHE='ayo-movil-v3';
 self.addEventListener('install', function(e){
-  e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(['./','./index.html','./app.js']); }).then(function(){ return self.skipWaiting(); }));
+  e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(['./index.html','./app.js']); }).then(function(){ return self.skipWaiting(); }));
 });
 self.addEventListener('activate', function(e){
   e.waitUntil(caches.keys().then(function(keys){
@@ -8,10 +8,9 @@ self.addEventListener('activate', function(e){
   }).then(function(){ return self.clients.claim(); }));
 });
 self.addEventListener('fetch', function(e){
-  var url=e.request.url;
   if(e.request.method!=='GET') return;
+  var url=e.request.url;
   if(url.indexOf('upload.wikimedia.org')!==-1 || url.indexOf('centrodemedioslibres.org')!==-1){
-    e.respondWith(fetch(e.request).catch(function(){ return caches.match(e.request); }));
     return;
   }
   e.respondWith(
