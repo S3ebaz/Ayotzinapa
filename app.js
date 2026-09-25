@@ -48,11 +48,38 @@ const ESTUDIANTES=[
 (function(){
 var grid=document.getElementById('fichas-grid');
 if(!grid) return;
+var conn=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+var save=!!(conn&&(conn.saveData||/2g/i.test(conn.effectiveType||'')));
+function activate(img){
+  if(!img||img.getAttribute('src')) return;
+  img.src=img.getAttribute('data-src');
+}
 ESTUDIANTES.forEach(function(s){
-var d=document.createElement('article');
-d.className='ficha';
-var src=CML+(CARAS[s.foto]||'');
-d.innerHTML='<img src="'+src+'" alt="'+s.nombre+'" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.style.display=\'none\'"><div class="pad"><div class="n">43 · '+String(s.n).padStart(2,'0')+'</div><h3>'+s.nombre+'</h3><p>'+s.edad+'. '+s.dato+'</p>'+(s.tag?'<span class="tag">'+s.tag+'</span>':'')+'</div>';
-grid.appendChild(d);
+  var d=document.createElement('article');
+  d.className='ficha';
+  var src=CML+(CARAS[s.foto]||'');
+  d.innerHTML='<img alt="'+s.nombre+'" data-src="'+src+'" width="150" height="170" decoding="async" referrerpolicy="no-referrer" onerror="this.style.display=\'none\'"><div class="pad"><div class="n">43 · '+String(s.n).padStart(2,'0')+'</div><h3>'+s.nombre+'</h3><p>'+s.edad+'. '+s.dato+'</p>'+(s.tag?'<span class="tag">'+s.tag+'</span>':'')+'</div>';
+  grid.appendChild(d);
 });
+var pending=[].slice.call(grid.querySelectorAll('img[data-src]'));
+function observe(){
+  if(!('IntersectionObserver' in window)){
+    pending.forEach(activate);
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ activate(en.target); io.unobserve(en.target); }
+    });
+  },{rootMargin:'120px'});
+  pending.forEach(function(img){ io.observe(img); });
+}
+var btn=document.getElementById('cargar-retratos');
+if(save&&btn){
+  btn.hidden=false;
+  btn.onclick=function(){ btn.hidden=true; observe(); };
+}else{
+  if(btn) btn.hidden=true;
+  observe();
+}
 })();
